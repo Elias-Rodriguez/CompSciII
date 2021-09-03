@@ -6,6 +6,7 @@
 user_input = input("Type in a word or a phrase to see if its a palindrome:")
 
 normal_str = user_input.replace(" ", "")
+normal_str = normal_str.lower()
 reverse_str = normal_str[::-1]
 
 if normal_str == reverse_str:
