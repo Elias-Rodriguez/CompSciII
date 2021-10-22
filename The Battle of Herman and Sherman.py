@@ -61,7 +61,7 @@ while True:
         f.write("The battle came to an end.\n")
         f.write("The story closes with both warriors now laying limp and lifeless.\n ")
 
-# Reading file
+# # Opening, reading, and closing the text file.
 f = open('raging_battle.txt', 'r')
 battle_story = f.read()
 f.close()
