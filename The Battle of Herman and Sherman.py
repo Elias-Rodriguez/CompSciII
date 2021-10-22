@@ -64,6 +64,7 @@ while True:
 # Reading file
 f = open('raging_battle.txt', 'r')
 battle_story = f.read()
+f.close()
 
 # Printing the text file
 print(battle_story)
