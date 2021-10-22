@@ -1,3 +1,4 @@
+# import required module
 import random
 
 # Creating and opening a new txt file.
@@ -60,4 +61,9 @@ while True:
         f.write("The battle came to an end.\n")
         f.write("The story closes with both warriors now laying limp and lifeless.\n ")
 
+# Reading file
+f = open('raging_battle.txt', 'r')
+battle_story = f.read()
 
+# Printing the text file
+print(battle_story)
