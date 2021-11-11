@@ -12,6 +12,7 @@ name = input('what is your name? ')
 player_data['name'] = name
 print('it is nice to meet you,', player_data['name'])
 df = pd.DataFrame(data=player_data, index=[0])
+df.to_csv('player_file.csv')
 answer = sp.wake_up(coin)
 
 if answer == 'a':
