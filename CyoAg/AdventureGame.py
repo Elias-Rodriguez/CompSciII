@@ -10,9 +10,10 @@ player_data['coin'] = coin
 #print('your coin toss was:', player_data['coin'])
 name = input('what is your name? ')
 player_data['name'] = name
-print('it is nice to meet you,', player_data['name'])
+
 df = pd.DataFrame(data=player_data, index=[0])
 df.to_csv('player_file.csv')
+sp.greet_player()
 answer = sp.wake_up(coin)
 
 if answer == 'a':
