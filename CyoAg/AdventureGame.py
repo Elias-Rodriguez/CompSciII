@@ -1,13 +1,17 @@
 import random
 import story_pieces as sp
+import pandas as pd
 
 coin = random.randint(0, 10)
+# Help with dictionary
+# https://www.programiz.com/python-programming/dictionary
 player_data = {}
 player_data['coin'] = coin
 #print('your coin toss was:', player_data['coin'])
 name = input('what is your name? ')
 player_data['name'] = name
 print('it is nice to meet you,', player_data['name'])
+df = pd.DataFrame(data=player_data, index=[0])
 answer = sp.wake_up(coin)
 
 if answer == 'a':
