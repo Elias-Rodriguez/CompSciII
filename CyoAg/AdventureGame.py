@@ -3,6 +3,11 @@ import story_pieces as sp
 
 coin = random.randint(0, 10)
 player_data = {}
+player_data['coin'] = coin
+#print('your coin toss was:', player_data['coin'])
+name = input('what is your name? ')
+player_data['name'] = name
+print('it is nice to meet you,', player_data['name'])
 answer = sp.wake_up(coin)
 
 if answer == 'a':
