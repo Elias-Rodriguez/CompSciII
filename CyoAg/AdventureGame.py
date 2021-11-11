@@ -6,12 +6,7 @@ answer = sp.wake_up(coin)
 
 if answer == 'a':
     if coin > 5:
-        print("\nNo connection found. Go explore the shuttle.")
-        answer1 = input("\nYou are currently in the control room. Would you like to explore:\n"
-                        "a.The room you are in.\n"
-                        "b.The break room.\n"
-                        "c.The engine room.\n"
-                        "d.Put on space suit and explore the moon.\n")
+        answer1 = sp.no_connection(coin)
         if answer1 == 'a':
             print("\nFound random log. Says you are 1 of 50 shuttles stranded on the moon.")
             answer2 = input("There's not much more in here. Where else would you like to explore:\n"
