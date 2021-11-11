@@ -2,6 +2,7 @@ import random
 import story_pieces as sp
 
 coin = random.randint(0, 10)
+player_data = {}
 answer = sp.wake_up(coin)
 
 if answer == 'a':
