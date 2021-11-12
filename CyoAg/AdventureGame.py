@@ -1,18 +1,34 @@
 import random
+import story_pieces as sp
+import pandas as pd
+import csv
+
+# importing the module
+import json
 
 coin = random.randint(0, 10)
-print("You wake up in a space shuttle on the moon with a month's worth oxygen and no fuel to go home.")
-print("a.Check coms to see if theres connection.\nb. Explore shuttle")
-answer = input("What would you like to do?")
+# Help with dictionary
+# https://www.programiz.com/python-programming/dictionary
+
+
+player_data = {}
+player_data['weapon'] = 'BFG'
+player_data['socks'] = 'Blue'
+player_data['car'] = 'Crown Vic'
+player_data['coin'] = coin
+#print('your coin toss was:', player_data['coin'])
+name = input('what is your name? ')
+player_data['name'] = name
+
+with open("player_file.json", "w") as outfile:
+    json.dump(player_data, outfile)
+
+sp.greet_player()
+answer = sp.wake_up(coin)
 
 if answer == 'a':
     if coin > 5:
-        print("\nNo connection found. Go explore the shuttle.")
-        answer1 = input("\nYou are currently in the control room. Would you like to explore:\n"
-                        "a.The room you are in.\n"
-                        "b.The break room.\n"
-                        "c.The engine room.\n"
-                        "d.Put on space suit and explore the moon.\n")
+        answer1 = sp.no_connection(coin)
         if answer1 == 'a':
             print("\nFound random log. Says you are 1 of 50 shuttles stranded on the moon.")
             answer2 = input("There's not much more in here. Where else would you like to explore:\n"
