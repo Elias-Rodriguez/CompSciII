@@ -4,7 +4,7 @@ def greet_player():
     player_data = {}
 
     #dict_from_csv = pd.read_csv('player_file.csv', header=None, index_col=0, squeeze=True).to_dict()
-    player_data = pd.read_csv('player_file.csv').to_dict()
+    player_data = pd.read_csv('player_file.csv',squeeze = True, header = None).to_dict()
     print(player_data)
     print('it is nice to meet you,', player_data['name'])
 

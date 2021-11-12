@@ -1,6 +1,7 @@
 import random
 import story_pieces as sp
 import pandas as pd
+import csv
 
 coin = random.randint(0, 10)
 # Help with dictionary
@@ -11,7 +12,17 @@ player_data['coin'] = coin
 name = input('what is your name? ')
 player_data['name'] = name
 
-df = pd.DataFrame(data=player_data, index=[0])
+#df = pd.DataFrame(data=player_data, index=[0])
+#df = pd.DataFrame(data=player_data, index = False, header = True)
+
+#df = pd.DataFrame(data=player_data, index=player_data.keys())
+# it is nice to meet you, {0: 'Jeremy', 1: 'Jeremy'}
+
+#df = pd.DataFrame([player_data])
+# it is nice to meet you, {0: 'Jeremy'}
+
+df = pd.DataFrame.from_dict(player_data, orient='index')
+
 df.to_csv('player_file.csv')
 sp.greet_player()
 answer = sp.wake_up(coin)
