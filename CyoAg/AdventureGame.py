@@ -2,14 +2,19 @@ import random
 import story_pieces as sp
 import pandas as pd
 import csv
-  
+
 # importing the module
 import json
 
 coin = random.randint(0, 10)
 # Help with dictionary
 # https://www.programiz.com/python-programming/dictionary
+
+
 player_data = {}
+player_data['weapon'] = 'BFG'
+player_data['socks'] = 'Blue'
+player_data['car'] = 'Crown Vic'
 player_data['coin'] = coin
 #print('your coin toss was:', player_data['coin'])
 name = input('what is your name? ')
