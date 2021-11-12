@@ -1,10 +1,13 @@
 import pandas as pd
 
+# importing the module
+import json
+
 def greet_player():
     player_data = {}
-
-    #dict_from_csv = pd.read_csv('player_file.csv', header=None, index_col=0, squeeze=True).to_dict()
-    player_data = pd.read_csv('player_file.csv',squeeze = True, header = None).to_dict()
+    # Opening JSON file
+    with open('player_file.json') as json_file:
+        player_data = json.load(json_file)
     print(player_data)
     print('it is nice to meet you,', player_data['name'])
 
